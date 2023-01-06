@@ -10,23 +10,6 @@
         <div class="container">
           <div class="row">
 
-          <nav id="nav-index" class="cc-load" data-rendered="true">
-            <ul>
-              <li>
-                <cc-dropdown class="cc-load">
-                  <span slot="label">Index</span>
-                  <a href="/">Welcome</a>
-                </cc-dropdown>
-              </li>
-              <li>
-                <cc-dropdown class="cc-load">
-                  <span slot="label">Test</span>
-                  <a href="/pages/test/">Test Page</a>
-                </cc-dropdown>
-              </li>
-            </ul>
-          </nav>
-
             <!-- Toggle dark-mode -->
             <div id="toggle-theme" class="toggle-btn">
               <input type="checkbox" id="dark-mode-toggle" />
@@ -35,112 +18,13 @@
               </label>
             </div>
 
-            <div class="col-4 mx-auto">
+            <div class="col-6 mx-auto">
               <h1 class="mb-4 text-center">Welcome!</h1>
-              <p class="mb-5">
-                This is the current sandbox for "Crystal Clear" Components (or
-                whatever it is going to be named).
-              </p>
-
-              <div id="logo-master" class="logo mb-5 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="275" height="200" viewBox="0 0 498.27 405.89">
-                  <g id="logo-master__outer">
-                    <path d="M499.29,202.79l-54.12,91.13-75.89-92.37,75.89-89.89Z" transform="translate(-1.02)" fill="#166dd2"
-                        fill-rule="evenodd" />
-                    <path d="M439.26,309.48l-82.42-98.6-49.45,82.73,76.82,112.28Z" transform="translate(-1.02)" fill="#00cee5"
-                        fill-rule="evenodd" />
-                    <path d="M438.33,95.49l-81.49,98.9-49.45-82.73L384.21.62Z" transform="translate(-1.02)" fill="#166dd2"
-                        fill-rule="evenodd" />
-                    <polygon points="382.57 0 243.54 0 188.8 95.49 437.31 95.49 382.57 0" fill="#0063d0" fill-rule="evenodd"
-                        opacity="0.95" style="isolation:isolate" />
-                    <polygon points="443.84 111.35 306.05 111.35 355.82 194.71 493.29 194.71 443.84 111.35" fill="#0063d0"
-                        fill-rule="evenodd" opacity="0.95" style="isolation:isolate" />
-                    <polygon points="243.23 404.65 383.19 404.65 438.24 309.79 188.48 309.79 243.23 404.65" fill="#00a4d0"
-                        fill-rule="evenodd" opacity="0.95" style="isolation:isolate" />
-                    <polygon points="355.82 210.57 306.05 293.92 443.84 293.92 493.29 210.57 355.82 210.57" fill="#00a4d0"
-                        fill-rule="evenodd" opacity="0.95" style="isolation:isolate" />
-                    <polygon points="244.78 0.31 116.64 0.31 0 202.48 116.64 404.65 243.23 404.65 126.28 202.48 244.78 0.31"
-                        fill="#0f35a2" fill-rule="evenodd" />
-                    <path d="M439,33" transform="translate(-1.02)" fill="#0063d0" fill-rule="evenodd" />
-                    <polyline points="61.53 95.78 0 202.48 61.53 310.22 126.28 202.48 61.53 95.78 126.28 202.48" fill="#3fffff"
-                        opacity="0.25" />
-                  </g>
-                  <g id="logo-master__inner">
-                    <polygon
-                        points="266.57 147.98 213.32 147.98 186.7 194.09 239.74 193.88 239.72 193.84 239.74 193.88 239.79 193.88 266.57 147.98"
-                        fill="#5eadff" opacity="0.5" />
-                    <polygon points="186.7 205.59 213.32 251.7 266.57 251.7 239.74 205.38 186.7 205.59" fill="#5eadff" opacity="0.5" />
-                    <polygon points="276.53 153.74 249.75 199.65 249.7 199.65 276.53 245.96 303.15 199.85 276.53 153.74" fill="#5eadff"
-                        opacity="0.5" />
-                  </g>
-                </svg>
-              </div>
-
-              <h2 class="mb-4 text-center">What is this nonsense?</h2>
-              <p class="mb-5">
-                An effort to compile a library of highly composable, supremely
-                reusable, somewhat opinionated visual constructs -- not a 
-                framework insomuch as it is a different way of thinking about
-                modern web development.
-              </p>
-
-              <hr></hr>
-
-              <h2 class="mb-4 text-center">But... why?</h2>
-              <p class="mb-4">
-                After having worked with a multitude of JavaScript frameworks,
-                CSS libraries, and Front End Templating Engines, I find myself
-                consistently gravitating toward a number of paradigms from
-                these ecosystems in my personal development.
-              </p>
-
-              <p class="mb-4">
-                I drew some inspiration from a fair number of these frameworks
-                then went ahead and threw them all together, utilizing native
-                browser API's where ever possible. This means minimal
-                dependencies and, ultimately, a super lightweight package for your
-                web projects :D
-              </p>
-
-              <p class="mb-5">
-                Meant to be an extension to existing, familiar HTML, "Crystal
-                Clear" Components utilizes the Web Component API to register
-                custom tags, enabling you to write clean, immaculate code while
-                ensuring consistent UI. This means <em>no more Front End templating
-                engine</em>. Instead, developers are enabled to spend their time
-                focusing on solutions as opposed to learning the Framework Of The Week.
-              </p>
-
-              <h3 class="mb-4 text-center">Goals for this project</h3>
-              <ul>
-                <li>Provide usable, composable, lightweight components that developers can use just like native HTML</li>
-                <li>Inform developers about best practices while working within this paradigm</li>
-                <li>Improve the developer experience by stripping out unecessary dependencies from the developent environments</li>
-              </ul>
+              <p class="mb-6">This tool will help visualize the results of a report run by the <code>@axe-core/cli</code> tool. All reports should be uploaded in <code>.json</code> format.</p>
+              <cc-file-picker class="mb-5"></cc-file-picker>
+              <cc-axe-report-viewer class="mb-5"></cc-axe-report-viewer>
             </div>
 
-          </div>
-        </div>
-      </div>
-      
-      <div class="container cc-load" data-rendered="true">
-        <div class="row">
-          <div class="col-4 mx-auto">
-            <p>
-              This container will be loaded to the DOM, 
-              but will not display until it intersects with 
-              the user's viewport. Lorem ipsum dolor sit amet 
-              consectetur adipisicing elit. Eos sed iusto nisi, 
-              repellendus tenetur autem cupiditate ut, 
-              voluptatibus illo hic ad quisquam, dignissimos 
-              reprehenderit temporibus fugit iste asperiores? 
-              Exercitationem, eum qui.
-            </p>
-
-            <cc-card-basic class="mt-5">
-              <h2 slot="heading">A heading for a test card</h2>
-              <div slot="body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam labore dolore ipsam odio debitis, officia nobis perspiciatis earum, aperiam, cupiditate quae repellat rem?</div>
-            </cc-card-basic>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import { DomHelpers } from '@utils';
-import '@styles/components/cards/basic-card.scss';
+import { DomHelpers } from "@utils";
+import "@styles/components/cards/basic-card.scss";
 
 export default class CardBasic extends HTMLElement {
   constructor() {
@@ -9,21 +9,21 @@ export default class CardBasic extends HTMLElement {
   }
 
   private clone() {
-    const slots = this.querySelectorAll('[slot]');
+    const slots = this.querySelectorAll("[slot]");
     this.innerHTML = this.template;
 
     slots.forEach((slot: Element) => {
-      const slotName = slot.getAttribute('slot');
+      const slotName = slot.getAttribute("slot");
 
       if (
-        slotName!.toLowerCase() === 'body' &&
+        slotName!.toLowerCase() === "body" &&
         DomHelpers.isDivElement(slot) === false
       ) {
         throw new Error('Slot `<slot="body">` must be a DIV element.');
       }
 
       this.querySelector(
-        `slot[name="${slot.getAttribute('slot')}"]`
+        `slot[name="${slot.getAttribute("slot")}"]`
       )!.replaceWith(slot);
     });
   }
@@ -33,20 +33,7 @@ export default class CardBasic extends HTMLElement {
   }
 
   connectedCallback() {
-    const host = this.classList.contains('cc-load')
-      ? this
-      : this.closest('.cc-load');
-
-    try {
-      !host!.getAttribute('data-rendered') &&
-        host!.setAttribute('data-rendered', 'true');
-      DomHelpers.isOnScreen(this) &&
-        !host!.getAttribute('data-opaque') &&
-        host!.setAttribute('data-opaque', 'true');
-    } catch (e) {
-      console.error(e);
-      throw new Error();
-    }
+    DomHelpers.loadComponent(this);
   }
 
   private template = `
