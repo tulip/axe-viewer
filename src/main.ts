@@ -42,6 +42,18 @@ const loadModules = () => {
       });
     }
 
+    if (document.querySelectorAll(`${COMPONENT_PREFIX}-slide`).length) {
+      await import("@components/Slider/Slide").then((module) => {
+        _REGISTRY_.push(module.default);
+      });
+    }
+
+    if (document.querySelectorAll(`${COMPONENT_PREFIX}-slider`).length) {
+      await import("@components/Slider/Slider").then((module) => {
+        _REGISTRY_.push(module.default);
+      });
+    }
+
     if (
       document.querySelectorAll(`${COMPONENT_PREFIX}-axe-report-viewer`).length
     ) {

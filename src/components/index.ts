@@ -1,3 +1,4 @@
-import { CardBasic } from './Cards';
+import { CardBasic } from "./Cards";
+import { Slide } from "./Slider";
 
-export { CardBasic };
+export { CardBasic, Slide };

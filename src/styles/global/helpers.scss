@@ -67,11 +67,13 @@ $index: 1;
   }
 
   .mx-#{$index} {
-    margin: 0 $margin;
+    margin-left: $margin;
+    margin-right: $margin;
   }
 
   .my-#{$index} {
-    margin: $margin 0;
+    margin-top: $margin;
+    margin-bottom: $margin;
   }
 
   .m-#{$index} {
@@ -122,11 +124,13 @@ $index: 1;
   }
 
   .px-#{$index} {
-    padding: 0 $padding;
+    padding-left: $padding;
+    padding-right: $padding;
   }
 
   .py-#{$index} {
-    padding: $padding 0;
+    padding-top: $padding;
+    padding-bottom: $padding;
   }
 
   .p-#{$index} {
@@ -134,6 +138,24 @@ $index: 1;
   }
 
   $index: $index + 1;
+}
+/*#endregion*/
+
+/*#region Display Helpers */
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
 }
 /*#endregion*/
 
